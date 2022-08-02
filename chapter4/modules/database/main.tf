@@ -9,7 +9,7 @@ resource "aws_db_instance" "database" {
   engine = "mysql"
   engine_version = "8.0"
   instance_class = "db.t2.micro"
-  identifier = "${var.namesapace-db-instance}"
+  identifier = "${var.namespace}-db-instance"
   name = "pets"
   username = "admin"
   password = random_password.password.result
