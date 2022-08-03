@@ -15,3 +15,12 @@ terraform {
     }
   }
 }
+
+resource "null_resource" "motto" {
+  triggers = {
+    always = timestamp()
+  }
+  provisioner "local-exec" {
+    command = "echo gotta catch em all"
+  }
+}
