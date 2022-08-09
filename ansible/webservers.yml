@@ -9,7 +9,7 @@
 
     - name: Copy nginx config file
       copy:
-        src: nginx.conf
+        src: /home/ubuntu/terraform-in-action/ansible/nginx.conf
         dest: /etc/nginx/sites-available/default
 
     - name: Enable configuration
@@ -20,7 +20,7 @@
 
     - name: Copy index.html
       template: >
-        src=index.html.j2
+        src=/home/ubuntu/terraform-in-action/ansible/index.html.j2
         dest=/usr/share/nginx/html/index.html
 
     - name: Restart nginx
